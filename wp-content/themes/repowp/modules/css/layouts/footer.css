@@ -1,0 +1,229 @@
+/*------------------------------------*\
+    FOOTER
+\*------------------------------------*/   
+
+.footer{
+	border-top: 7px solid #eef2f5;
+	background-color: $bg-footer;
+	text-align: center;
+	padding: 35px 0 0;
+	margin-top: 50px;
+
+	@mixin breakpoint desktop{
+		margin-top: 85px;
+	}
+
+	&__content{
+		@mixin clearfix;
+		@mixin Light;
+		padding: 0 30px;
+		font-size: 14px;
+		line-height: 30px;
+		color: $menu-color;
+
+		@mixin breakpoint desktop{
+			max-width: $site-width;
+			margin-right: auto;
+			margin-left: auto;
+			padding: 40px 0;
+		}
+
+		&__logo{
+			@mixin breakpoint tablet_portrait{
+				float: left;
+				width: 33.33%;
+				padding: 20px 3%;
+				font-size: 12px;
+			}
+			
+			@mixin breakpoint desktop{
+				width: 20%;
+				padding-right: 0;
+				padding-left: 0;
+				text-align: left;
+				font-size: 14px;
+			}
+		}
+
+		&__address{
+			margin: 30px 0 10px;
+
+			@mixin breakpoint tablet_portrait{
+				float: left;
+				width: 33.33%;
+				padding: 20px 3%;
+				font-size: 12px;
+				margin-top: 0;
+				position: relative;
+				max-width: 250px;
+			}
+			
+			@mixin breakpoint desktop{
+				width: 35%;
+				padding-right: 0;
+				padding-left: 0;
+				font-size: 14px;
+				max-width: none;
+			}
+
+			&:before{
+				display: none;
+				@mixin Icon;
+
+				@mixin breakpoint tablet_portrait{
+					position: absolute;
+					content: "\e94f";
+					display: block;
+					color: $icon-color;
+					font-size: 25px;
+					top: 20px;
+					left: 0;
+				}
+
+				@mixin breakpoint desktop{
+					left: 50px;
+				}
+			}
+		}
+
+		&__contact{
+			margin-bottom: 25px;
+
+			@mixin breakpoint tablet_portrait{
+				float: left;
+				width: 33.33%;
+				padding: 20px 3%;
+				font-size: 12px;
+				max-width: 250px;
+			}
+			
+			@mixin breakpoint desktop{
+				width: 20%;
+				font-size: 14px;
+				max-width: none;
+				padding-left: 0;
+				padding-right: 0;
+			}
+
+			&__phone{
+				@mixin breakpoint tablet_portrait{
+					position: relative;
+				}
+
+				&:before{
+					display: none;
+					@mixin Icon;
+
+					@mixin breakpoint tablet_portrait{
+						position: absolute;
+						content: "\e94d";
+						display: block;
+						color: $icon-color;
+						font-size: 25px;
+						top: 0;
+						left: 10px;
+					}
+				}
+			}
+
+			&__email{
+				@mixin breakpoint tablet_portrait{
+					position: relative;
+				}
+
+				&:before{
+					display: none;
+					@mixin Icon;
+
+					@mixin breakpoint tablet_portrait{
+						position: absolute;
+						content: "\e94b";
+						display: block;
+						color: $icon-color;
+						font-size: 25px;
+						top: 0;
+						left: 10px;
+					}
+				}
+			}
+		}
+
+		a{
+			color: $menu-color;
+
+			&:hover{
+				color: $main-color;
+			}
+		}
+
+		&__contact-socials{
+			width: 25%;
+			float: left;
+			margin-bottom: 10px;
+		}
+
+	}
+
+	&__copyright{
+		background-color: $copyrightbg;
+		color: $copy-text;
+		font-size: 12px;
+		line-height: 24px;
+		padding: 15px 30px;
+
+		@mixin breakpoint tablet_landscape{
+			height: 38px;
+			line-height: 37px;
+			padding-top: 0;
+			padding-bottom: 0;
+			font-size: 10px;
+			border-top: 1px solid #b19495;
+		}
+
+		@mixin breakpoint desktop{
+			padding-left: 0;
+			padding-right: 0;
+		}
+
+		&__content{
+			@mixin clearfix;
+
+			> span{
+				display: block;
+				color: #fff;
+				
+				a{
+					color: #fff;
+				}
+			}
+
+			@mixin breakpoint desktop{
+				max-width: $site-width;
+				margin: 0 auto;
+			}
+
+			&__text{
+				@mixin breakpoint tablet_landscape{
+					float: left;
+				}
+			}
+
+			&__piva{
+				@mixin breakpoint tablet_landscape{
+					float: right;
+				}
+
+				> a{
+					margin-right: 5px;
+					color: $copy-text;
+					text-decoration: underline;
+
+					&:hover{
+						color: $white;
+					}
+				}
+			}
+		}
+
+	}
+}

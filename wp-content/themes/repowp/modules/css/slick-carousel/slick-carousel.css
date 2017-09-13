@@ -1,0 +1,166 @@
+/*------------------------------------*\
+    SLICK CAROUSEL
+\*------------------------------------*/  
+
+.slick-carousel{
+	position: relative;
+	overflow: hidden;
+	margin-left: -5px;
+	margin-right: -5px;
+	margin-bottom: 40px;
+	height: 72px;
+
+	@mixin breakpoint desktop{
+		margin-bottom: 0;
+	}
+	
+	.slick-slider{
+		height: 100%;
+		max-width: $site-width;
+		margin: 0 auto;
+		
+		.slick-list{
+			height: 100%;
+		}
+	}
+	
+	&--with-dots{
+		padding-bottom: 40px;
+	}
+	
+	&--with-arrows{
+		padding: 0 40px;
+		margin-left: 0;
+		margin-right: 0;
+
+		.slick-arrow{
+			margin-top: 0px;
+			display: block;
+			height: auto;
+			width: 50px;
+
+			&:before{
+				@mixin arrow;
+			}
+		
+			&.slick-prev{
+				left: -48px;
+				top: 50%;
+				margin-top: -59px;
+				
+				@mixin breakpoint tablet_portrait{
+					margin-top: -13px;
+				}
+				
+				@mixin breakpoint tablet_landscape{
+					margin-top: -11px;
+				}
+				
+				@mixin breakpoint desktop{
+					margin-top: 12px;
+				}
+				
+				&:before{
+					transform: rotate(180deg) !important;
+				}
+			}
+
+			&.slick-next{
+				right: -48px;
+				top: 50%;
+				margin-top: -59px;
+				
+				@mixin breakpoint tablet_portrait{
+					margin-top: -13px;
+				}
+				
+				@mixin breakpoint tablet_landscape{
+					margin-top: -11px;
+				}
+				
+				@mixin breakpoint desktop{
+					margin-top: 12px;
+				}
+			}
+			
+			&.slick-disabled{
+				
+				&:before{
+					opacity: 0;
+				}
+			}
+
+			&:hover{
+				&:before{
+					color: $minor-color;
+				}
+			}
+		}
+	}
+		
+	&__container{
+		
+		&__slide{
+			padding: 0;
+			max-width: 20%;
+			float: left;
+			outline: 0 !important;
+			border: 0 !important;
+			
+			&__link{
+				display: block;
+				width: 100%;
+				height: 100%;
+				position: relative;
+				text-align: center;
+				
+				&__content{
+				
+					&__title{
+						color: $white;
+						@mixin Regular;
+						font-size: 16px;
+						height: 31px;
+						overflow: hidden;
+						width: 100%;
+					}
+					
+					&__subtitle{
+						height: 26px;
+						overflow: hidden;
+						width: 100%;
+						color: $white;
+						@mixin Bold;
+						font-size: 12px;
+					}
+					
+					&__text{
+						color: $white;
+						@mixin Regular;
+						font-size: 12px;
+						line-height: 16px;
+						height: 33px;
+						overflow: hidden;
+					}
+				}
+				
+				img{
+					object-fit: contain;
+					font-family: 'object-fit: contain;';
+					max-width: none;
+				}
+			}
+		}
+	}
+}
+
+.slick-dots li button{
+	background: rgba(0,0,0,0.5);
+	
+	&:before{
+		color: $white;
+		@mixin Regular;
+		font-size: 16px;
+		opacity: 1;
+	}
+}

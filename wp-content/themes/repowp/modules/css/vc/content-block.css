@@ -1,0 +1,141 @@
+/*------------------------------------*\
+    CONTENT BLOCK
+\*------------------------------------*/  
+
+.content-block{
+	@mixin clearfix;
+	text-align: center;
+	margin: 50px auto;
+	max-width: $site-width;
+
+	@mixin breakpoint tablet_portrait{
+		margin: 110px auto 40px;
+		text-align: left;
+	}
+
+	&__wrapper{
+		width: 100%;
+		text-align: center;
+
+		@mixin breakpoint tablet_portrait{
+			width: 50%;
+			text-align: left;
+		}
+
+		&--center{
+			margin: 0 auto;
+		}
+
+		&--left{
+			float: left;
+		}
+
+		&--right{
+			float: right;
+		}
+	
+		&__title{
+			@mixin Bold;
+			color: $main-color;
+			font-size: 40px;
+			line-height: 40px;
+			margin-bottom: 0;
+
+			@mixin breakpoint tablet_portrait{
+				font-size: 50px;
+				text-align: left;
+				line-height: 50px;
+			}
+			
+			&--with-subtitle{
+				margin-bottom: 5px;
+			}
+		}
+
+		/* Sub_title */
+		
+		&__sub_title{
+			@mixin Regular;
+			color: $subtitle-color;
+			margin-left: auto;
+			margin-right: auto;
+			font-size: 22px;
+			line-height: 30px;
+			letter-spacing: .06em;
+			margin-bottom: 30px;
+
+			@mixin breakpoint tablet_portrait{
+				text-align: left;
+			}
+		}
+
+		&__arrow-link{
+			@mixin Icon;
+			@mixin transition;
+			position: absolute;
+			right: 0;
+			display: block;
+	  		font-size: 38px;
+	  		line-height: 38px;
+	  		border-radius: 50%;
+	  		border: 1px solid $main-color;
+			color: $main-color;
+	  		padding: 10px;
+	  		margin: -9px 0 0;
+	  		top: 8px;
+
+	  		&:hover{
+	  			border-color: $white;
+
+	  			&:before{
+	  				color: $white;
+	  			}
+	  		}
+
+			&:before{
+				@mixin transition;
+	  			content: "\e900";
+			}
+
+			@mixin breakpoint tablet_landscape{
+				right: -26%;
+			}
+		}
+
+		&__paragraph{
+			font-size: 16px;
+			margin-bottom: 30px;
+		}
+
+		&__button{
+			font-size: 14px;
+			padding-right: 15px;
+			padding-left: 15px;
+
+			@mixin breakpoint tablet_portrait{
+				font-size: 16px;
+				padding-left: 40px;
+				padding-right: 40px;
+			}
+		}
+
+		&--light{
+
+			.content-block__wrapper__title{
+				color: $white;
+			}
+
+			.content-block__wrapper__sub_title{
+				color: #f8fcff;
+			}
+
+			.content-block__wrapper__paragraph{
+				color: $white;
+
+				@mixin breakpoint tablet_portrait{
+					color: #9ba1b0;
+				}
+			}
+		}
+	}
+}

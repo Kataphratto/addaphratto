@@ -1,0 +1,76 @@
+/*------------------------------------*\
+    PAGE
+\*------------------------------------*/
+
+main.page{
+
+	@mixin breakpoint desktop{
+		max-width: $site-width;
+		margin: 0 auto;
+	}
+}
+
+.content{
+	@mixin clearfix;
+
+	.page-template-default &, .page-template-news &{
+
+		@mixin breakpoint desktop{
+			max-width: $site-width;
+			margin: 0 auto;
+		}
+	}
+}
+
+.page-content{
+	float: left;
+	width: 100%;
+	padding-left: 30px;
+	padding-right: 30px;
+	word-break: break-word;
+
+	@mixin breakpoint tablet_portrait{
+		word-break: none;
+	}
+
+	@mixin breakpoint tablet_landscape{
+		padding-left: 30px;
+		padding-right: 0;
+		width: 70%;
+		padding-right: 5%;
+		border-right: 1px solid #d6d1cb;
+	}
+
+	@mixin breakpoint desktop{
+		padding-right: 5%;
+		width: 76%;
+		padding-left: 0;
+	}
+
+	&__wrapper{
+		max-width: 100%;
+		margin: 0;
+
+		@mixin breakpoint desktop{
+			max-width: 880px;
+		}
+
+		&--fullwidth{
+			width: auto;
+			max-width: none;
+			margin: 0;
+		}
+
+		&__title-block{
+			@mixin titleSeparator;
+
+			&__title{
+				@mixin Title;
+			}
+
+			&__subtitle{
+				@mixin Subtitle;
+			}
+		}
+	}
+}

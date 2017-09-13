@@ -1,0 +1,83 @@
+# Translation of Plugins - Disable Author Pages - Stable (latest release) in German
+# This file is distributed under the same license as the Plugins - Disable Author Pages - Stable (latest release) package.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2017-03-02 16:35:12+0000\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: GlotPress/2.4.0-alpha\n"
+"Language: de\n"
+"Project-Id-Version: Plugins - Disable Author Pages - Stable (latest release)\n"
+
+#. Author URI of the plugin/theme
+msgid "https://staude.net/"
+msgstr "https://staude.net/"
+
+#. Author of the plugin/theme
+msgid "Frank Staude"
+msgstr "Frank Staude"
+
+#. Description of the plugin/theme
+msgid "Disable the author pages in WordPress and redirect to the homepage."
+msgstr "Deaktiviert die Autorenseiten in WordPress"
+
+#. Plugin URI of the plugin/theme
+msgid "https://staude.net/wordpress/plugins/disable-author-pages/"
+msgstr "https://staude.net/wordpress/plugins/disable-author-pages/"
+
+#: class-disable-author-pages.php:204
+msgid "Settings"
+msgstr "Einstellungen"
+
+#: class-disable-author-pages.php:190
+msgid "Save Changes"
+msgstr "Speichern"
+
+#: class-disable-author-pages.php:185
+msgid "Disable for admin author pages only"
+msgstr "Nur Seiten von Administratoren umleiten"
+
+#: class-disable-author-pages.php:178
+msgid "Redirect non exists author pages"
+msgstr "Auch Seiten nicht existierender Autoren umleiten"
+
+#: class-disable-author-pages.php:171
+msgid "Disable Authorlink"
+msgstr "Autorenlink deaktivieren"
+
+#: class-disable-author-pages.php:164
+msgid "Destinationpage"
+msgstr "Zielseite"
+
+#: class-disable-author-pages.php:156
+msgid "HTTP Status"
+msgstr "Status der HTTP-Weiterleitung"
+
+#: class-disable-author-pages.php:155
+msgid "307 (Temporary Redirect)"
+msgstr "307 (Vorübergehende Umleitung)"
+
+#: class-disable-author-pages.php:154
+msgid "301 (Moved Permanently)"
+msgstr "301 (Ständige Umleitung)"
+
+#. #-#-#-#-#  tmp-disable-author-pages.pot (Disable Author Pages 0.11) 
+#. #-#-#-#-#
+#. Plugin Name of the plugin/theme
+#: class-disable-author-pages.php:148
+msgid "Disable Author Pages"
+msgstr "Disable Author Pages"
+
+#: class-disable-author-pages.php:140
+msgid "Settings to disable the author pages."
+msgstr "Hier können die Einstellungen vorgenommen werden um Autorenseiten zu unterdrücken."
+
+#: class-disable-author-pages.php:139
+msgid "Disable Author settings"
+msgstr "Einstellungen für Autorenseiten"
+
+#: class-disable-author-pages.php:125
+msgid "Author Pages"
+msgstr "Autorenseiten"

@@ -1,0 +1,20 @@
+/*------------------------------------*\
+    COOKIE
+\*------------------------------------*/
+
+#cookieChoiceInfo.cookie-wrapper{
+	padding: 10px 20px;
+	font-size: 12px;
+	letter-spacing: .04em;
+	line-height: 18px;
+
+	@mixin breakpoint desktop{
+		padding: 10px 180px;
+	}
+
+	a{
+		&:hover{
+			color: $white;
+		}
+	}
+}

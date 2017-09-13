@@ -1,0 +1,65 @@
+/*------------------------------------*\
+    APPLICATION
+\*------------------------------------*/  
+
+.application{
+	margin-bottom: 30px;
+
+	@mixin breakpoint tablet_portrait{
+		margin-bottom: 40px;
+		max-width: 300px;
+	}
+
+	@mixin breakpoint desktop{
+		max-width: none;
+	}
+
+	&__refer{
+		@mixin Light;
+		font-size: 12px;
+		line-height: 14px;
+		color: #757575;
+		margin-bottom: 5px;
+	}
+
+	&__title{
+		@mixin Light;
+		font-size: 22px;
+		line-height: 25px;
+		color: #757575;
+		margin-bottom: 2px;
+	}
+
+	&__section{
+		@mixin Bold;
+		color: $main-color;
+		font-size: 14px;
+	}
+}
+
+.vc_row.vc_application{
+
+	@mixin breakpoint tablet_portrait{
+		margin-bottom: 60px;
+		padding-top: 10px;
+	}
+
+	.vc_column_container{
+		width: 380px;
+		padding-right: 40px;
+
+		&:first-child{
+			@mixin breakpoint desktop{
+				border-right: 1px solid $border-color;
+			}
+		}
+
+		&:last-child{
+			@mixin breakpoint desktop{
+				padding-left: 80px;
+				padding-right: 0;
+			}
+		}
+	}
+
+}

@@ -1,0 +1,62 @@
+/*------------------------------------*\
+    SIDEBAR
+\*------------------------------------*/
+
+.breadcrumbs{
+	margin: 35px auto;
+	padding-right: 30px;
+	padding-left: 30px;
+	float: none;
+	width: 100%;
+
+	@mixin breakpoint desktop{
+		max-width: $site-width;
+		margin-left: auto;
+		margin-right: auto;
+		padding-left: 0;
+		padding-right: 0;
+	}
+
+	span{
+
+		span, a{
+			font-size: 12px;
+			text-transform: uppercase;
+			margin-right: 11px;
+
+			@mixin breakpoint tablet_portrait{
+				margin-right: 10px;
+			}
+		}
+
+		span{
+			@mixin Bold;
+			color: $breadcrumbs-sel;
+			
+			a{
+				color: $breadcrumbs;
+				
+				&:after{
+					content: "\e907";
+					display: inline-block;
+					@mixin Icon;
+					font-size: 8px;
+					margin-left: 10px;
+					color: $breadcrumbs;
+					transform: rotate(-90deg);
+				}
+			}
+		}
+
+		a{
+			@mixin Regular;
+			@mixin transition;
+			color: $breadcrumbs;
+			border-bottom: 1px solid transparent;
+
+			&:hover{
+				color: $breadcrumbs-sel;
+			}
+		}
+	}
+}

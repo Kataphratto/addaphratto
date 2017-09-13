@@ -1,0 +1,39 @@
+/*------------------------------------------*\
+   EASY BUTTON
+\*-------------------------------------------*/  
+
+.easy-button{
+	@mixin button;
+	
+	@mixin breakpoint tablet_portrait{
+		padding: 13px 30px;
+		margin-bottom: 30px;
+	}
+
+	&&--larger{
+		@mixin breakpoint tablet_portrait{
+			padding-left: 50px;
+			padding-right: 50px;
+		}
+	}
+
+	&--left{
+		text-align: left;
+	}
+
+	&--top-margin{
+		margin-top: 40px;
+
+		@mixin breakpoint tablet_portrait{
+			margin-top: 60px;
+		}
+	}
+
+	&--bottom-margin{
+		margin-bottom: 30px;
+
+		@mixin breakpoint tablet_portrait{
+			margin-top: 60px;
+		}
+	}
+}

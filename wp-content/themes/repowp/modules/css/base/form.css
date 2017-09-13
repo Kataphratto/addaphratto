@@ -1,0 +1,95 @@
+/*------------------------------------*\
+    FORM ELEMENTS
+\*------------------------------------*/ 
+
+input[type="text"], input[type="email"]{
+	height: 42px;
+}
+
+input[type="text"], input[type="email"], textarea{
+	@mixin Light;
+	@mixin transition;
+	width: 100%;
+	border: none;
+	background: #f2f2f2;
+	font-size: 14px;
+	line-height: 18px;
+	color: $minor-color;
+	letter-spacing: .04em;
+	padding: 15px;
+	border: 1px solid $minor-color;
+
+	@mixin breakpoint tablet_portrait{
+		max-width: 335px;
+	}
+
+	&:focus{
+		border-bottom-color: $main-color;
+	}
+
+	&.wpcf7-not-valid{
+		border-color: $red-alert;
+	}
+}
+
+textarea{
+	min-height: 170px;
+	resize: vertical;
+
+	@mixin breakpoint tablet_portrait{
+		max-width: 588px;
+	}
+}
+
+input[type="button"], button, input[type="submit"]{
+	@mixin button;
+	border: none;
+	display: inline-block;
+	margin: 0 auto 30px;
+
+	@mixin breakpoint tablet_portrait{
+		padding: 13px 30px;
+	}
+}
+
+/* Placeholder */
+
+input[type="text"]::-webkit-input-placeholder { 
+  color: $minor-color;
+}
+input[type="text"]::-moz-placeholder {
+  color: $minor-color;
+}
+input[type="text"]:-ms-input-placeholder {
+  color: $minor-color;
+}
+input[type="text"]:-moz-placeholder {
+  color: $minor-color;
+}
+
+input[type="email"]::-webkit-input-placeholder { 
+  color: $minor-color;
+}
+input[type="email"]::-moz-placeholder {
+  color: $minor-color;
+}
+input[type="email"]:-ms-input-placeholder {
+  color: $minor-color;
+}
+input[type="email"]:-moz-placeholder {
+  color: $minor-color;
+}
+
+textarea::-webkit-input-placeholder { 
+  color: $minor-color;
+}
+textarea::-moz-placeholder {
+  color: $minor-color;
+}
+textarea:-ms-input-placeholder {
+  color: $minor-color;
+}
+textarea:-moz-placeholder {
+  color: $minor-color;
+}
+

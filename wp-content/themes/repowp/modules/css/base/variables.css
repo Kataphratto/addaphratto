@@ -1,0 +1,112 @@
+/*------------------------------------*\
+    VARIABLES
+\*------------------------------------*/
+
+/* Default Colors
+	* 
+	* Set of default project color variables.
+	* 
+*/
+
+/* Main Colors */
+$main-color:        #f58220;
+$main-color-2:      #fb9799;
+
+$minor-color:       color(darken($main-color, 45%));
+$minor-light:       #5d646b;
+$minor-lightest:    #979b9f;
+
+/* Basic Colors */
+$white:			       #fff;
+$dark-white:        #e7eaef;
+$black:				   #000;
+$red:				#f58220;
+$grey:				#858585;
+$light-grey:		#949494;
+
+/* Message colors */
+$red-alert:		    #ff6d6d;
+
+/* Backgrounds */
+$bg-header:         #ffffff;
+$bg-header-top:     #eaeaea;
+$bg-footer:		       #fff;
+$bg-copy:           #510808;
+$bg-menu:			#ffffff;
+$bg-fb:				#4564b3;
+$bg-twitter:		#23aee6;
+$bg-yt:				#f58220;
+$bg-insta:			#d00ba0;
+$bg-text-slide:		rgba(255,255,255,0.9);
+$copyrightbg:		#f58220;
+
+/* FORM */
+$bg-input:			#f9f9f9;
+$shadow:			rgba(217,217,217,1);
+$input-color:		#818181;
+
+/* Text colors */
+$menu-color:        #2d2e26;
+$pre-header:		#222222;
+$pre-header-hover:	#f58220;
+$text-color:		   #666;
+$slide-subtitle:	#222222;
+$text-light: 		#b3b7bb;
+$copy-text:         #8e8e8e;
+$breadcrumbs:       #5e5653;
+$breadcrumbs-sel:   #f58220;
+$icon-color:        #fb8385;
+$title-color:       #2b2e13;
+$subtitle-color:    #7d8071;
+$search-text:		#3b3b3b;
+$event-date:		#191919;
+$event-title:		#191919;
+$event-text:		#191919;
+$sidebar-color:        #666;
+$event-link:		#cc0000;
+$footer-text:		#3c2415;
+$newsletter-sub:	#e9e6f1;
+$newsletter-text:	#e9e6f1;
+$text-input-form:	#626262;
+$open-menu:			#ffffff;
+$close-menu:		#ffffff;
+$text-menu-mobile:	#ffffff;
+
+/* Miscellaneous */
+$scrollbar-color:   color(lighten($main-color, 60%));
+$home-color:		#efd67f;
+$ico-sub-mobile:	#ffffff;
+
+/* Borders */
+$border-color:		#d2d4d9;
+$header-bottom:		#c1c4c8;
+$search-border:		#ebebeb;
+$li-menu-border:	#d9747a;
+$event-border:		#e4e3e5;
+$border-menu-fixed:	#cccccc;
+
+/* scrollbar events */
+$bg-bar:			#d9d9d9;
+$arrow-bg:			#e9e9e9;
+$bar-color:			#b5b5b5;
+
+/* Site Dimensions */
+$site-width:        1170px;
+$p-margin:			  28px;
+$h-margin:			  30px;
+$img-margin:		  28px;
+$lang-menu:          120px;
+
+/* Z-indexes
+	* 
+	* Set of z-index values
+	* 
+*/
+$z-index-negative:      -1;
+$z-index-0: 	     	 0;
+$z-index-1: 	  	     1;
+$z-index-10:			10;
+$z-index-20:			20;
+$z-index-30:			30;
+$z-index-40:			40;
+$z-index-50:			50;

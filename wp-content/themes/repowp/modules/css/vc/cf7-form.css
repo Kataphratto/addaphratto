@@ -1,0 +1,100 @@
+/*------------------------------------------*\
+   CF7 FORM ELEMENT
+\*-------------------------------------------*/   
+
+.cf7-form{
+	@mixin clearfix;
+	padding-bottom: 10px;
+	max-width: 100%;
+	padding-top: 30px;
+
+	@mixin breakpoint desktop{
+		max-width: 1130px;
+		margin: 0;
+	}
+
+	&__title-group{
+		@mixin titleSeparator;
+
+		&__title{
+			@mixin Title;
+		}
+
+		&__subtitle{
+			@mixin Subtitle;
+		}
+	}
+
+	&__form-content{
+
+		&__label-field{
+			@mixin Bold;
+			font-size: 16px;
+			margin-bottom: 10px;
+			display: block;
+			text-transform: uppercase;
+		}
+
+		&__button{
+			margin-top: 42px;
+			margin-bottom: 17px;
+		}
+
+		&__privacy{
+			font-size: 12px;
+		}
+	}
+}
+
+.wpcf7-form-control.wpcf7-checkbox.wpcf7-not-valid{
+
+	.wpcf7-list-item-label{
+		border-bottom: 1px solid $red-alert;
+	}
+}
+
+/* Basic CF7 rules */
+.page-content{
+
+	.wpcf7{
+		padding-bottom: 30px;
+
+		.wpcf7-text{
+			margin-bottom: 15px;
+		}
+
+		.wpcf7-list-item-label{
+			font-size: 11px;
+			letter-spacing: .03em;
+		}
+
+		span.wpcf7-not-valid-tip{
+			display: none !important;
+		}
+
+		span.wpcf7-list-item{
+			margin: 0;
+		}
+
+		div.wpcf7-response-output{
+			@mixin Light;
+			margin: 0;
+			font-size: 14px;
+			line-height: 24px;
+			padding: 12px 20px;
+
+			@mixin breakpoint tablet_landscape{
+				margin: 0 auto;
+				max-width: 1130px;
+			}
+		}
+
+		div.wpcf7-validation-errors{
+			border: 2px solid $red-alert;
+		}
+
+		div.wpcf7-mail-sent-ok{
+	    	border: 2px solid #b2d2a5;
+		}
+	}
+}

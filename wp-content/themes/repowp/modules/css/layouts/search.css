@@ -1,0 +1,132 @@
+/*------------------------------------*\
+    SEARCH
+\*------------------------------------*/
+
+ 
+.no-results .searchform label{
+	display: none;
+}
+
+.search{
+	@mixin Regular;
+	max-width: 100%;
+	margin: 0 auto;
+	padding: 0;
+	color: $main-color;
+	
+	.breadcrumbs{
+		text-align: left;
+	}
+	
+	.page-content{
+		width: 100%;
+		border-right: none;
+		padding-left: 30px;
+		padding-right: 30px;
+		position: relative;
+		z-index: 1;
+
+		@mixin breakpoint desktop{
+			padding-right: 0;
+			padding-left: 0;
+		}
+		
+		&__wrapper{
+			
+			width: 100%;
+			display: block;
+			max-width: 100%;
+			
+			@mixin breakpoint desktop{
+				max-width: $site-width;
+			}
+			
+			&__title-block{
+				width: 100%;
+				display: block;
+				padding-bottom: 0;
+				
+				&:after{
+					display: none;
+				}
+				
+				h1{
+					color: $main-color;
+					text-align: left;
+					display: block;
+					width: 100%;
+					font-size: 20px;
+					@mixin Regular;
+					padding-bottom: 30px;
+					border-bottom: 1px solid $black;
+					margin-bottom: 30px;
+					
+					@mixin breakpoint tablet_portrait{
+						font-size: 50px;
+					}
+				}
+			}
+			
+			&__results-container{
+			
+				article{
+					margin-bottom: 40px;
+					width: 100%;
+					
+					@mixin breakpoint tablet_portrait{
+						width: 31%;
+						margin-right: 2%;
+						float: left;
+						
+						&:nth-child(3n){
+							margin-right: 0;
+						}
+						
+						&:nth-child(3n+1){
+							clear: both;
+						}
+					}
+					
+					h3.entry-title{
+						@mixin Regular;
+						color: $main-color;
+						font-size: 24px;
+						margin-bottom: 10px;
+					}
+					
+					.entry-content{
+						font-size: 14px;
+						color: $black;
+						@mixin Regular;
+						text-align: left;
+						display: block;
+						margin-bottom: 20px;
+						
+						p{
+							display: block;
+							width: 100%;
+							font-size: 14px;
+							color: $black;
+							text-align: left;
+							margin-bottom: 0;
+						}
+					}
+					
+					.entry-footer{
+						margin-top: 0;
+						margin-bottom: 0;
+						
+						a{
+							color: $main-color;
+							transition: all 0.2s;
+							
+							&:hover{
+								color: $black;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}

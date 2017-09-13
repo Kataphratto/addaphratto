@@ -1,0 +1,112 @@
+/*------------------------------------------*\
+   CF7 SINGLE FIELD FOR NEWSLETTER
+\*-------------------------------------------*/   
+
+.cf7-newsletter{
+	text-align: center;
+	
+	&__title{
+		@mixin Light;
+		font-size: 42px;
+		line-height: 40px;
+		color: $white;
+		margin-bottom: 40px;
+		letter-spacing: -1px;
+	}
+	
+	&__text{
+		@mixin Light;
+		font-size: 18px;
+		line-height: 18px;
+		margin-bottom: 15px;
+		letter-spacing: 0px;
+	}
+	
+	.wpcf7-form{
+		max-width: 720px;
+		margin: 0 auto;
+
+		.newsletter-content{
+			@mixin clearfix;
+			max-width: 720px;
+			margin: 0 auto;
+			border-bottom: 2px solid #5d646b;
+		}
+			
+		.your-email{
+			width: 100%;
+
+			@mixin breakpoint tablet_portrait{
+				float: left;
+				width: 580px;
+			}
+			
+			input{
+				height: 48px;
+				display: block;
+				border: none;
+				border-radius: 0;
+				color: #8a959f;
+				margin-bottom: 10px;
+			}
+		}
+		
+		.newsletter-button{
+			width: 100%;
+
+			@mixin breakpoint tablet_portrait{
+				float: right;
+				width: 120px;
+			}
+
+			button{
+				@mixin Regular;
+				position: relative;
+				height: 48px;
+				display: block;
+				font-size: 24px;
+				color: $main-color;
+				background: transparent;
+
+				&:after{
+					position: absolute;
+					content: "\e900";
+					border: none;
+					margin: 0;
+					font-size: 32px;
+					float: none;
+					top: -4px;
+					right: 0;
+				}
+
+				&:hover{
+					color: $white;
+
+					&:after{
+						color: $white;
+					}
+				}
+			}
+		}
+		
+		.wpcf7-list-item-label{
+			@mixin Light;
+			float: none;
+			font-size: 12px !important;
+			letter-spacing: .02em;
+			margin-top: 5px;
+			
+			input{
+				margin-right: 5px;
+			}
+		}
+	}
+
+	div.wpcf7-validation-errors{
+		color: $white !important;
+	}
+
+	div.wpcf7-response-output{
+		margin-top: 20px !important;
+	}
+}

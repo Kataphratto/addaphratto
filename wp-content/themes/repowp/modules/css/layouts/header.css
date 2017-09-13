@@ -1,0 +1,92 @@
+/*------------------------------------*\
+    HEADER
+\*------------------------------------*/
+
+.header{
+	background: $bg-header;
+	position: relative;
+	z-index: 2;
+	display: block;
+	
+	&__top{
+		background: $bg-header-top;
+		border-bottom: 1px solid $header-bottom;
+		
+		&__wrapper{
+			@mixin clearfix;
+			@mixin Regular;
+			margin: 0 auto;
+			position: relative;
+			padding: 2px 30px;
+			height: auto;
+			font-size: 12px;
+			text-align: center;
+
+			@mixin breakpoint tablet_portrait{
+				max-width: $site-width;
+				text-align: left;
+			}
+			
+			&--text{
+				color: $pre-header;
+				display: block;
+				text-align: center;
+				
+				@mixin breakpoint tablet_portrait{
+					display: inline-block;
+					text-align: left;
+				}
+			}
+			
+			&--tel{
+				margin-right: 10px;
+				
+				a{
+					color: $pre-header;
+					
+					&:hover{
+						color: $pre-header-hover;
+					}
+				}
+				
+				&:before{
+					content: "\e942";
+					@mixin Icon;
+					font-size: 13px;
+					margin-right: 5px;
+				}
+			}
+			
+			&--email{
+				margin-right: 10px;
+				
+				a{
+					color: $pre-header;
+					
+					&:hover{
+						color: $pre-header-hover;
+					}
+				}
+				
+				&:before{
+					content: "\e925";
+					@mixin Icon;
+					font-size: 13px;
+					margin-right: 5px;
+				}
+			}
+		}
+	}
+	
+	&__wrapper{
+		@mixin clearfix;
+		margin: 0 auto;
+		position: relative;
+		z-index: 2;
+
+		@mixin breakpoint desktop{
+			max-width: 100%;
+		}
+	}
+	
+}

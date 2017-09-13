@@ -1,0 +1,59 @@
+/*------------------------------------*\
+    STYLES IMPORTS
+\*------------------------------------*/
+
+/* Base stylesheets */
+
+@import "base/fonts";
+@import "base/icomoon";
+@import "base/variables";
+@import "base/mixins";
+@import "base/extends";
+@import "base/reset";
+@import "base/form";
+@import "base/vc-rewrite";
+
+/* Wordpress Layouts stylesheets */
+
+@import "layouts/header";
+@import "layouts/menu";
+@import "layouts/single-post";
+@import "layouts/footer";
+@import "layouts/sidebar";
+@import "layouts/page";
+@import "layouts/home";
+@import "layouts/breadcrumbs";
+@import "layouts/404.css";
+@import "layouts/news";
+@import "layouts/widget";
+@import "layouts/lang-selector";
+@import "layouts/search";
+@import "layouts/cookie";
+
+/* Slick Carousel */
+
+@import "slick-carousel/slick.css";
+@import "slick-carousel/slick-theme.css";
+@import "slick-carousel/slick-carousel.css";
+
+/* Visual Composer modules stylesheets */
+
+@import "vc/base-container";
+@import "vc/title-element";
+@import "vc/latest-posts";
+@import "vc/easy-button";
+@import "vc/separator";
+@import "vc/single-image";
+@import "vc/cf7-newsletter";
+@import "vc/cf7-form";
+@import "vc/socials";
+@import "vc/list-elements";
+@import "vc/text-rectangle";
+@import "vc/quote-block";
+@import "vc/slider";
+@import "vc/text-block";
+@import "vc/feature-icon";
+@import "vc/application";
+@import "vc/product-categories";
+@import "vc/company-data";
+@import "vc/content-block";

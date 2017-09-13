@@ -1,0 +1,37 @@
+/*------------------------------------*\
+    LANG SELECTOR
+\*------------------------------------*/
+
+.lang-selector{
+	display: block;
+
+	&__lang-item{
+		@mixin clearfix;
+		display: block;
+		width: 100%;
+		border-bottom: 1px solid;
+		border-bottom-color: rgba(255,255,255,.35);
+		padding: 3px 30px;
+
+		&:last-child{
+			border-bottom: none;
+		}
+
+		&__label{
+			@mixin Light;
+			color: $white;
+			font-size: 20px;
+			letter-spacing: .06em;
+			float: left;
+
+			&.active{
+				@mixin Bold;
+			}
+		}
+
+		&__image{
+			float: left;
+			margin: 11px 15px 0 0;
+		}
+	}
+}

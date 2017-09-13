@@ -1,0 +1,175 @@
+/*------------------------------------*\
+    PRODUCT CATEGORIES
+\*------------------------------------*/
+
+.entry-content--product{
+	.entry-meta{
+		display: none;
+	}
+}
+
+.product-categories{
+
+	&__description{
+		margin-top: 30px;
+		margin-bottom: 25px;
+	}
+
+	&__list{
+		@mixin Light;
+		position: relative;
+		width: 100%;
+		max-width: 335px;
+		font-size: 14px;
+		line-height: 16px;
+		color: #8f9193;
+		background: #e9edf0;
+		letter-spacing: .04em;
+
+		&__label{
+			position: relative;
+			cursor: pointer;
+			padding: 15px 15px;
+			user-select: none;
+
+			&:after{
+				transition: all .2s ease;
+				content: "";
+				position: absolute;
+				top: 18px;
+				right: 18px;
+				width: 0;
+				height: 0;
+				border-style: solid;
+				border-width: 11px 6px 0 6px;
+				border-color: $main-color transparent transparent transparent;
+			}
+
+			&:hover{
+
+				&:after{
+					top: 21px;
+				}
+			}
+		}
+		
+		&__content{
+			position: absolute;
+			top: 46px;
+			left: 0;
+			background: #e9edf0;
+			display: block;
+			max-height: 282px;
+			width: 100%;
+			max-width: 335px;
+
+			&__link{
+				display: block;
+				width: 100%;
+				padding: 15px 15px;
+				color: #8f9193;
+				border-bottom: 1px solid $border-color;
+
+				&:hover{
+					color: #fff;
+					background-color: $main-color;
+					border-bottom-color: $main-color;
+				}
+
+				&:first-child{
+					border-top: 1px solid $border-color;
+				}
+			}
+
+			&.show{
+				height: auto;
+			}
+
+			&.hide{ 
+				height: 0;
+				overflow: hidden;
+
+			}
+
+			&.scroll{
+				overflow-y: scroll;
+			}
+		}
+	}
+
+}
+
+.product-grid{
+	@mixin clearfix;
+
+	&__element{
+		position: relative;
+		overflow: hidden;
+		margin-bottom: 6px;
+		width: 270px;
+		height: 224px;
+		max-width: 100%;
+
+		@mixin breakpoint mobile{
+			float: left;
+			margin-right: 6px;
+		}
+
+		@mixin breakpoint tablet_landscape{
+			max-width: 32%;
+		}
+
+		@mixin breakpoint desktop{
+			max-width: 100%;
+		}
+
+		img{
+			object-fit: cover;
+		}
+
+		&__text{
+			transition: background .2s ease;
+			position: absolute;
+			left: 0;
+			top: 0;
+			width: 100%;
+			height: 100%;
+			background: rgba(0,0,0,0);
+
+			&__wrapper{
+				transition: bottom .1s ease;
+				position: absolute;
+				left: -999em;
+				bottom: -800px;
+				margin-left: 30px;
+
+				span{
+					@mixin Regular;
+					text-transform: uppercase;
+					font-size: 20px;
+					line-height: 20px;
+					color: $white;
+					display: block;
+				}
+
+				strong{
+					@mixin Bold;
+					margin-top: 2px;
+					font-size: 12px;
+					line-height: 12px;
+					display: block;
+					color: $main-color;
+				}
+			}
+
+			&:hover{
+				background: rgba(0,0,0,.5);
+
+				.product-grid__element__text__wrapper{
+					left: 0;
+					bottom: 50px;
+				}
+			}
+		}
+	}
+}

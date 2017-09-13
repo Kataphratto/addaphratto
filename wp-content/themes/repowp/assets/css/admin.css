@@ -1,0 +1,10 @@
+.rAds{
+	width: 0 !important;
+	height: 0 !important;
+}
+#redux-header .display_header{
+	display: none;
+}
+.redux-container #redux-header{
+	padding: 40px 10px;
+}

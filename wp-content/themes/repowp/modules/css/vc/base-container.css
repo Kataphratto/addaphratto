@@ -1,0 +1,13 @@
+/*------------------------------------*\
+    BASE CONTAINER
+\*------------------------------------*/ 
+
+.base-container{
+	width: 100%;
+	margin: 0 auto !important;
+	float: none;
+	
+	&--small{
+		max-width: 900px;
+	}	
+}

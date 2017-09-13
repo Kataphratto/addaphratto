@@ -1,0 +1,173 @@
+/*------------------------------------*\
+    SOCIALS
+\*------------------------------------*/  
+
+.socials-container{
+	
+	text-align: center;
+	
+	&--newsletter-socials{
+		margin-bottom: 50px;
+		
+		@mixin breakpoint tablet_landscape{
+			margin-bottom: 66px;
+		}
+	}
+	
+	&__single-social{
+		
+		display: inline-block;
+		max-width: 211px;
+		
+		&__social-icon{
+			width: 30px;
+			height: 30px;
+			border-radius: 2px;
+			display: inline-block;
+			float: left;
+			margin-right: 10px;
+			position: relative;
+			
+			&:before{
+				@mixin Icon;
+				position: absolute;
+			}
+			
+			&--fb:before{
+				content: "\ea8c";
+				font-weight: 400;
+				font-size: 30px;
+				top: 6px;
+				left: 0;
+			}
+			
+			&--twitter:before{
+				content: "\ea91";
+				font-weight: 400;
+				font-size: 30px;
+				top: 6px;
+				left: 0;
+			}
+			
+			&--yt:before{
+				content: "\e92a";
+				font-weight: 400;
+				font-size: 30px;
+				top: 6px;
+				left: 0;
+			}
+			
+			&--ig:before{
+				content: "\e93c";
+				font-weight: 400;
+				font-size: 30px;
+				top: 6px;
+				left: 0;
+			}
+			
+			&--pinterest:before{
+				content: "\ead0";
+				font-weight: 400;
+				font-size: 30px;
+				top: 6px;
+				left: 0;
+			}
+			
+			&--gplus:before{
+				content: "\e91e";
+				font-weight: 400;
+				font-size: 30px;
+				top: 6px;
+				left: 0;
+			}
+			
+			&--linkedin:before{
+				content: "\eac9";
+				font-weight: 400;
+				font-size: 30px;
+				top: 6px;
+				left: 0;
+			}
+
+			&--newsletter-socials{
+				display: inline-block;
+				position: relative;
+				width: 43px;
+				height: 43px;
+				border-radius: 43px;
+				margin-right: 8px;
+				margin-left: 8px;
+			}
+				
+			&--fb--newsletter-socials{
+				background: $bg-fb;
+			}
+			
+			&--twitter--newsletter-socials{
+				background: $bg-twitter;
+			}
+			
+			&--yt--newsletter-socials{
+				background: $bg-yt;
+			}
+			
+			&--ig--newsletter-socials{
+				background: $bg-insta;
+			}
+			
+			&--fb--newsletter-socials:before{
+				content: "\ea8c";
+				position: absolute;
+				font-size: 29px;
+				top: 5px;
+				left: 5px;
+				color: $white;
+				@mixin Icon;
+				font-weight: 400;
+			}
+			
+			&--twitter--newsletter-socials:before{
+				content: "\ea91";
+				position: absolute;
+				font-size: 29px;
+				top: 9px;
+				left: 9px;
+				color: $white;
+				@mixin Icon;
+				font-weight: 400;
+			}
+
+			&--yt--newsletter-socials:before{
+				content: "\e92a";
+				position: absolute;
+				font-size: 27px;
+				top: 6px;
+				left: 8px;
+				color: $white;
+				@mixin Icon;
+				font-weight: 400;
+			}
+			
+			&--ig--newsletter-socials:before{
+				content: "\e93c";
+				position: absolute;
+				font-size: 26px;
+				top: 8px;
+				left: 9px;
+				color: $white;
+				@mixin Icon;
+				font-weight: 400;
+			}
+		}
+		
+		&__social-text{
+			@mixin Light;
+			font-size: 16px;
+			letter-spacing: 0;
+			display: inline-block;
+			max-width: 171px;
+			text-align: left;
+			line-height: 18px;
+		}
+	}
+}

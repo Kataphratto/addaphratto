@@ -1,0 +1,31 @@
+/*------------------------------------------*\
+   LIST ELEMENT
+\*-------------------------------------------*/  
+
+.listelement{
+
+	&__content{
+
+		&__title{
+			@mixin Bold;
+			color: $main-color;
+			text-transform: uppercase;
+			font-size: 16px;
+			line-height: 20px;
+			margin-bottom: 16px;
+		}
+
+		&__list{
+
+			ul{
+
+				li{
+					@mixin Regular;
+					font-size: 14px;
+					line-height: 24px;
+					letter-spacing: .1em;
+				}
+			}
+		}
+	}
+}

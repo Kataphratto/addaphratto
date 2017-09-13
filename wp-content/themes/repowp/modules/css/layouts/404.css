@@ -1,0 +1,65 @@
+/*------------------------------------*\
+    404
+\*------------------------------------*/
+
+.error404{
+	@mixin Regular;
+	max-width: 100%;
+	margin: 0 auto;
+	padding: 0;
+	color: $main-color;
+	
+	.breadcrumbs{
+		text-align: left;
+	}
+	
+	.page-content{
+		
+		padding: 0;
+		
+		&__wrapper{
+			
+			width: 100%;
+			display: block;
+			max-width: 100%;
+			
+			&__title-block{
+				width: 100%;
+				display: block;
+				
+				&:after{
+					display: none;
+				}
+				
+				h1{
+					color: $main-color;
+					text-align: center;
+					display: block;
+					width: 100%;
+					font-size: 20px;
+					@mixin Regular;
+					
+					@mixin breakpoint tablet_portrait{
+						font-size: 50px;
+					}
+				}
+			}
+			
+			.entry-content{
+				margin-bottom: 90px;
+				
+				p{
+					display: block;
+					width: 100%;
+					font-size: 14px;
+					color: $black;
+					text-align: center;
+					
+					@mixin breakpoint tablet_portrait{
+						font-size: 20px;
+					}
+				}
+			}
+		}
+	}
+}

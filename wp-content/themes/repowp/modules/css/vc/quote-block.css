@@ -1,0 +1,46 @@
+/*------------------------------------------*\
+   QUOTE BLOCK
+\*-------------------------------------------*/  
+
+.quote_block{
+
+	&__content{
+		padding: 15px 0 35px 0;
+
+		@mixin breakpoint tablet_portrait{
+			padding: 15px 20px 35px 20px;
+		}
+
+		&__title{
+			@mixin Regular;
+			font-size: 24px;
+			line-height: 28px;
+			text-transform: uppercase;
+			letter-spacing: .03em;
+			color: $title-color;
+			max-width: 300px;
+		}
+
+		&__text{
+			@mixin ExtraLightItalic;
+			padding: 18px 0 20px;
+			font-size: 16px;
+			line-height: 24px;
+			color: #2a2d31;
+			color: $titol-color;
+			opacity: .6;
+
+			p{
+				margin-bottom: 0;
+			}
+		}
+
+		&__person-name{
+			@mixin SemiBold;
+			font-size: 14px;
+			line-height: 20px;
+			color: $titol-color;
+			opacity: .6;
+		}
+	}
+}

@@ -1,0 +1,32 @@
+ 
+{
+	"minify": true,
+	
+	"options": [
+		"html5printshiv",
+		"html5shiv",
+		"setClasses"
+	],
+
+	"feature-detects": [
+		"test/inputtypes",
+		"test/json",
+		"test/requestanimationframe",
+		"test/svg",
+		"test/video",
+		"test/css/animations",
+		"test/css/appearance",
+		"test/css/backgroundsize",
+		"test/css/backgroundsizecover",
+		"test/css/boxsizing",
+		"test/css/flexbox",
+		"test/css/lastchild",
+		"test/css/mediaqueries",
+		"test/css/nthchild",
+		"test/css/transforms",
+		"test/css/transforms3d",
+		"test/css/transitions",
+		"test/css/objectfit",
+		"test/svg/inline"
+	]
+}

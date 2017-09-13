@@ -1,0 +1,70 @@
+/*------------------------------------------*\
+   TEXT RECTANGLE
+\*-------------------------------------------*/  
+
+.text_rectangle{
+	position: relative;
+	background-color: #3b4045;
+	margin-bottom: 13px;
+	width: 100%;
+
+	&--dark{
+		background-color: #313539;
+	}
+
+	&--light{
+		background-color: #5d646b;
+	}
+
+	&__content{
+		padding: 30px 10%;
+
+		@mixin breakpoint tablet_portrait{
+			padding: 60px 25% 60px 45px;
+		}
+
+		&__text{
+			@mixin Light;
+			color: $white;
+
+			@mixin breakpoint tablet_portrait{
+				font-size: 24px;
+				line-height: 30px;
+			}
+
+			@mixin breakpoint tablet_landscape{
+				font-size: 42px;
+				line-height: 40px;
+			}
+		}
+
+		&__plus-button{
+			@mixin Icon;
+			display: none;
+			position: absolute;
+			right: 4%;
+			top: 50%;
+			transform: translate3d(-50%,0,0);
+			backface-visibility: hidden;
+
+			@mixin breakpoint tablet_portrait{
+				display: block;
+				right: -6%;
+			}
+
+			@mixin breakpoint tablet_landscape{
+				right: 4%;
+			}
+
+			&:after{
+  				content: "\e907";
+  				font-size: 57px;
+  				color: $main-color;
+			}
+
+			&:hover{
+				color: $white;
+			}
+		}
+	}
+}

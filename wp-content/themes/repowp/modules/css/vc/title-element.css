@@ -1,0 +1,145 @@
+/*------------------------------------*\
+    TITLE ELEMENT
+\*------------------------------------*/  
+
+.title_element{
+	text-align: center;
+	margin: 50px auto;
+	max-width: 670px;
+
+	@mixin breakpoint tablet_portrait{
+		margin: 80px auto 40px;
+	}
+	
+	&__title{
+		@mixin Regular;
+		text-align: center;
+		color: $title-color;
+		font-size: 36px;
+		line-height: 36px;
+
+		@mixin breakpoint tablet_portrait{
+			font-size: 50px;
+			line-height: 50px;
+		}
+		
+		&--with-subtitle{
+			margin-bottom: 5px;
+		}
+		
+		&--big{
+			font-size: 50px;
+		
+			@mixin breakpoint tablet_portrait{
+				font-size: 70px;
+			}
+		}
+		
+		&--small{
+			font-size: 30px;
+
+			@mixin breakpoint tablet_portrait{
+				font-size: 50px;
+
+			}
+		}
+		
+		&--alignleft{
+			text-align: left;
+		}
+		
+		&--alignright{
+			text-align: right;
+		}
+		
+		&--white{
+			color: $white;
+			font-size: 40px;
+			padding-top: 12px;
+			line-height: 40px;
+
+			@mixin breakpoint mobile{
+				padding-top: 33px;
+			}
+		}
+		
+		&--white-bannered{
+			color: $white;
+		}
+	}
+
+	/* Sub_title */
+	
+	&__sub_title{
+		@mixin Regular;
+		text-align: center;
+		letter-spacing: 0.5px;
+		color: $subtitle-color;
+		max-width: 520px;
+		margin-left: auto;
+		margin-right: auto;
+		font-size: 22px;
+		line-height: 22px;
+		margin-top: 6px;
+
+		@mixin breakpoint tablet_portrait{
+			margin-top: 0;
+			font-size: 30px;
+			line-height: 32px;
+		}
+		
+		&--alignleft{
+			text-align: left;
+		}
+		
+		&--alignright{
+			text-align: right;
+		}
+
+		&--white{
+			color: $white;
+			font-size: 18px;
+			line-height: 20px;
+			max-width: none;
+		}
+		
+		&--white-bannered{
+			color: #cacaca;
+			padding-top: 5px;
+			max-width: none;
+		}
+	}
+
+	&__arrow-link{
+		@mixin Icon;
+		@mixin transition;
+		position: absolute;
+		right: 0;
+		display: block;
+  		font-size: 38px;
+  		line-height: 38px;
+  		border-radius: 50%;
+  		border: 1px solid $main-color;
+		color: $main-color;
+  		padding: 10px;
+  		margin: -9px 0 0;
+  		top: 8px;
+
+  		&:hover{
+  			border-color: $white;
+
+  			&:before{
+  				color: $white;
+  			}
+  		}
+
+		&:before{
+			@mixin transition;
+  			content: "\e900";
+		}
+
+		@mixin breakpoint tablet_landscape{
+			right: -26%;
+		}
+	}
+}
